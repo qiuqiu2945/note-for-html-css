@@ -1,0 +1,78 @@
+用于收集用户输入
+<form></form>
+属性：
+	* autocomplete——会记住之前的输入，再次点击时会出现在下方
+	* novalidate—— 规定在提交表单时不对表单数据进行验证
+  
+	1. 表单元素——input元素
+<input />有很多type属性规定不同的Input形态
+	* 输入类型Type属性
+  * text——单行文本输入，默认宽度20个字符
+	* password——密码字段，掩码处理
+	* radio——单选按钮
+    <input type="radio" name="sex" value="female">Female
+
+	* submit——提交按钮，表单处理程序在form的action属性中指定
+    <input type="submit" value="Submit">
+
+	* checkbox——复选框
+	* button——按钮，和button标签差不多
+	
+html5新增
+    * color——颜色选择器，IE不支持
+		* date——Firefox 或者Internet Explorer 11 以及更早版本不支持 type="date"。
+		* datetime
+		* email—— 在被提交时自动对电子邮件地址进行验证， 某些智能手机会识别 email 类型，并在键盘增加 ".com" 以匹配电子邮件输入。IE9 及更早版本不支持 type="email"
+		* month——Firefox 或者Internet Explorer 11 以及更早版本不支持
+		* number
+		* range——滑动条控件，IE9 及早期版本不支持 type="range"
+		* search——用于搜索字段
+		* tel—— 目前只有 Safari 8 支持 tel 类型
+		* time——Firefox 或者Internet Explorer 11 以及更早版本不支持
+		* url—— 某些智能手机会识别 email 类型，并在键盘增加 ".com" 以匹配电子邮件输入。
+		* week——Internet Explorer 不支持
+输入限制/属性
+		* disabled——禁用, 被禁用的元素是不可用和不可点击的。
+		* max=""——最大值
+		* maxlength=""——最大字符数
+		* min=""——最小值
+		* pattern——规定通过检查的正则表达式
+		* readonly——只读
+		* required——必须填写
+		* size=""——规定输入字段的字符数
+		* step——数字间隔
+		* value=""——初始值
+		* autofocus——页面加载时自动获得焦点
+		* form—— 规定 <input> 元素所属的一个或多个表单
+		* formaction="url" ——规定当提交表单时处理该输入控件的文件的 URL， 覆盖 <form> 元素的 action 属性。
+		* placeholder—— 描述输入字段预期值的提示， 会在用户输入值之前显示在输入字段中
+        <form action="action_page.php">
+* action属性
+		* 一般指定某个服务器脚本来处理被提交的表单
+* method属性
+    * 规定提交表单是所使用的http方法， GET 或 POST
+      * get-默认；被动，无敏感信息，少量数据，，表单数据在页面地址栏可见
+			* post-表单在跟新数据，或包含敏感信息
+* name属性——字段有name属性才能保证输入字段被正确的提交
+
+	2. <fieldset></fieldset> 组合表单数据——为frame添加一个框框，
+
+	3. <legend>组合框框的名字</legend>——添加一个组合框的名字
+
+	4. 下拉列表元素
+<select name="">    ——下拉列表元素
+    <option value="" selected>name</option>    ————下拉选项,selected属性表示预定义选项
+</select>
+
+	5. 多行输入字段（文本域）
+<textarea name="" rows="" cols=""></textarea>
+
+	6. 按钮元素
+<button type="button" onclic="">name</button>
+
+html5
+	1. 输入数据预定义
+    <input list="browsers">
+    <datalist>——为input元素设置预定义的值
+        <option value="" /> ——
+    </datalist>
