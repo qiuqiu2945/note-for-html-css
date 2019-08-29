@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>test1</title>
+		<style>
+			#header {
+				background-color:gray;
+				color:white;
+				text-align:center;
+				padding:5px;
+			}
+			#section {
+				width:350px;
+				float:left;
+				padding:10px;
+			}
+			#nav {
+				line-height:10px;
+				background-color:#eeeeee;
+				height:1024px;
+				width:100px;
+				float:left;
+				padding:5px;	
+			}
+		</style>
+	</head>
+
+
+	<body>
+	<h1 id="header"> hello </h1>
+	<!--style="background-color:white;font-family:times;color:red;font-size:30px"-->
+	<div id="nav">
+		<ol>
+		<a href="#link"><li>link</li></a><br />
+		<a href="#text"><li>text</li></a><br />
+		<a href="#add"><li>address</li></a><br />
+		<a href="#abb"><li>abbr</li></a><br />
+		<a href="#cite"><li>cite</li></a><br />
+		<a href="#di"><li>delete and insert</li></a><br />
+		</ol>
+	</div>
+	<h2><a name="link">1 link</a></h2>
+	<p>
+	link to 
+	<a href="http://www.baidu.com/" target="_blank"><img src="baidu.JPG" width="121" height="55"></a>
+	</p>
+	<h2><a name="text">2 text</a></h2>
+	<!--格式化文本-->
+	<b>	bold	</b>	<br />
+	<strong>	strong	</strong>	<br />
+	<big>	big	</big>	<br />
+	<em>	emphasize	</em>	<br />
+	<i>	italic	</i>	<br />
+	<small>	small	</small>	<br />
+	this <sub>	subscript	</sub>	<br />
+	this <sup>	superscript	</sup>	
+
+	<!--pre 保留空格和换行-->
+	<pre>
+	while(!0)
+		i++
+	</pre>	
+	<!--显示计算机代码-->
+	<code>	code	</code>	<br />
+	<kbd>	keyboard input	</kbd> <br />
+	<tt>	teletype	</tt>	<br />
+	<samp>	sample	</samp>	<br />
+	<var>	variable	</var>	<br />
+
+	<h2><a name="add">3 address</a></h2>
+	<!--地址-->
+	<address>
+	written by jenny qiu. <br />
+	visit at:<br />
+	bjyxszd.com<br />
+	China
+	</address>
+
+	<h2><a name="abb">4 abbr</a></h2>
+	<!--缩写-->
+	<abbr title="博君一肖是真的">bjyxszd</abbr>	<br />
+
+	<!--反向文字-->
+	<bdo dir="rtl">博君一肖是真的</bdo><br />
+
+	<h2><a name="cite">5 cite</a></h2>
+	<!--引用-->
+	<!--长引用-->
+	<blockquote>
+	长引用
+	</blockquote>
+	<!--短引用-->
+	<q>
+	短引用
+	</q><br />
+
+	<cite>article name</cite><br />
+	<h2><a name="di">6 di</a></h2>
+	<!--del and ins-->
+	<del>505</del> <br />	<!--划掉-->
+	<ins>55555</ins>	<br />	<!--下划线-->
+	</body>
+</html>
