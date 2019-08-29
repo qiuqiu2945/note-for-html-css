@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8-26w1b</title>
+	<style type="text/css">
+		*{
+			padding:0;
+			margin: 0;
+			color: #333;
+		}
+		.box{
+			width: 1140px;
+			margin:40px auto;
+			border: 1px solid #eee;
+		}
+		.content{
+			font-size: 12px;
+			padding: 29px 18px 0px 29px;
+			width: 790px;
+			color: #333;
+		}
+		h1,h2,h3,h4,h5,h6{
+			margin:10px 0px 15px;
+		}
+		.info{
+			margin: 20px 0px 35px;
+			overflow: hidden;
+		}
+		.baseinf{
+			width: 395px;
+			float: left;
+			background-image: url("./jpg/bgline.png");
+		}
+		.baseinf_item{
+			display: block;
+			font-size: 12px;
+			height: 26px;
+			line-height: 26px;
+			font-family: "微软雅黑";
+			float: left;
+		}
+		.name{
+			width: 30%;
+			padding:0px 5px 0px 12px;
+			font-weight: bold;
+			
+		}
+		.value{
+			width: 60%;
+			
+		}
+		.catelog{
+			margin: 25px 0;
+			overflow: hidden;
+		}
+		.catel{
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			font-family: "微软雅黑";
+			float: left;
+
+		}
+		.cateh{
+			font-size: 28px;
+			font-weight: 400;
+			width: 100px;
+			height: 60px;
+			line-height: 60px;
+			margin:20px 0px 0px 18px;
+			text-align: center;
+			float: left;
+		}
+		ol,ul{
+			list-style-type: none;
+		}
+		.catecnt{
+			display: block;
+			padding:20px 0px 35px;
+			border-left: 1px solid #eee;
+			float: left;
+			position: relative;
+		}
+		
+		a:link,a:visited{
+			text-decoration: none;
+		}
+		a:hover{
+			text-decoration: underline;
+		}
+		li.level1{
+			line-height: 28px;
+		}
+		li.level1 a{
+			color: #136ec2;
+		}
+		li.level1 .index{
+			display: inline-block;
+			vertical-align: top;
+			font-size: 16px;
+			font-weight: 500;
+			color: #63a0df;
+			padding: 0px 8px 0px 20px;
+			text-align: right;
+		}
+		li.level1 .catname{
+			display: inline-block;
+			vertical-align: top;
+			font-size: 16px;
+			font-weight: 500;
+			width: 120px;
+		}
+		li.level2{
+			line-height: 21px;
+		}
+		li.level2 a{
+			color: #555;
+		}
+		li.level2 .index{
+			display: inline-block;
+			vertical-align: top;
+			font-size: 12px;
+			font-weight: 500;
+			padding: 0px 5px 0px 35px;
+		}
+		li.level2 .catname{
+			display: inline-block;
+			font-size: 12px;
+			font-weight: 500;
+			width: 115px;
+		}
+		.catecnt ol:first-child{
+			border-left: 0;
+		}
+		.catecnt ol{
+			float: left;
+			border-left: 1px solid #f5f5f5;
+		}
+		.catel:after{
+			height: 0;
+			display: block;
+			clear: both;
+			overflow: hidden;
+			visibility: hidden;
+		}
+		h2.head_title1{
+			border-left: solid 12px #4F9CEE;
+		    font-size: 22px;
+		    display: block;
+		    font-family: 'Microsoft Yahei',SimHei,Verdana;
+		    font-weight: 500;
+		    line-height: 22px;
+		    margin: 35px 0 15px -30px;
+		    clear: both;
+		    background: url("./jpg/bghead1.png") repeat-x;
+		    overflow: hidden;
+		    position: relative;
+		}
+		.head_cnt{
+			background-color: #fff;
+			padding:0px 8px 0px 18px;
+		}
+		.para{
+			font-size: 14px;
+			margin-bottom: 15px;
+			text-indent: 2em;
+			line-height: 24px;
+		}
+		h3.head_title2{
+		    font-size: 18px;
+		    display: block;
+		    font-family: 'Microsoft Yahei',SimHei,Verdana;
+		    font-weight: 400;
+		    line-height: 20px;
+		    margin: 20px 0px 12px;
+		    clear: both;
+		    overflow: hidden;
+		}
+		.work_cnt{
+
+		}
+		h3.head_title3{
+			font-size: 16px;
+		    display: block;
+		    font-family: 'Microsoft Yahei',SimHei,Verdana;
+		    font-weight: 400;
+		    line-height: 18px;
+		}
+		.album,.single{
+			border-top: 2px solid #ccc;
+			border-bottom: 1px solid #eee;
+			margin:10px 0px 20px;
+		}
+		.music_table{
+			width: 100%;
+			border-collapse: collapse;
+			word-wrap: break-word;
+			line-height: 22px;
+			color: #000;
+		}
+		tr{
+			display: table-row;
+			border-bottom: 1px solid #f5f5f5;
+			width: 100%;
+			height:22px;
+			line-height: 22px;
+		}
+		.music_table th{
+			display: table-cell;
+			text-align: center;
+			padding: 2px 10px;
+			font-weight: 700;
+			height:28px;
+			line-height: 28px;
+			background-color: #f9f9f9;
+			color: #555;
+		}
+		.music_table td{
+			padding: 2px 10px 2px 15px;
+			border-bottom: 1px solid #f5f5f5;
+			text-align: center;
+			vertical-align: center;
+			font-family: "arial","微软雅黑";
+		}
+		.backtop{
+			border-radius: 10px;
+		}
+		.backtop a{
+			display: block;
+			width: 40px;
+			height: 40px;
+			right: 90px;
+			bottom: 50px;
+			position: fixed;
+			background-color: #4F9CEE;
+			color: #fff;
+			text-decoration: none;
+			font-size: 14px;
+			font-family: "arial";
+			font-weight: 500;
+			text-align: center;
+			line-height: 40px;
+			border-radius: 10px;
+		}
+		.backtop a:hover{
+			color: #333;
+			background-color: #4F9CEE;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="content">
+			<h1>个人简介</h1>
+			<!--目录-->
+			<div class="catelog">										
+				<div class="catel">
+					<h2 class="cateh">目录</h2>
+					<div class="catecnt">
+						<ol >
+							<li class="level1">
+								<span class="index">1</span>
+								<span class="catname"><a href="#1">目录1</a></span>
+							</li>
+							<li class="level1">
+								<span class="index">2</span>
+								<span class="catname"><a href="#2">目录2</a></span>
+							</li>
+							<li class="level1">
+								<span class="index">3</span>
+								<span class="catname"><a href="#3">目录3</a></span>
+							</li>
+							<li class="level2">
+								<span class="index">·</span>
+								<span class="catname"><a href="#music_work">作品</a></span>
+							</li>
+						</ol>
+						<ol>
+							<li class="level2">
+								<span class="index">·</span>
+								<span class="catname"><a href="#drama_work">作品</a></span>
+							</li>
+							<li class="level2">
+								<span class="index">·</span>
+								<span class="catname"><a href="#film_work">作品</a></span>
+							</li>
+							<li class="level2">
+								<span class="index">·</span>
+								<span class="catname"><a href="#audio_work">作品</a></span>
+							</li>
+							<li class="level2">
+								<span class="index">·</span>
+								<span class="catname"><a href="#host_work">作品</a></span>
+							</li>
+							<li class="level2">
+								<span class="index">·</span>
+								<span class="catname"><a href="#muse_work">作品</a></span>
+							</li>
+						</ol>
+						<ol>
+							<li class="level2">
+								<span class="index">·</span>
+								<span class="catname"><a href="#pic_work">作品</a></span>
+							</li>
+							<li class="level1">
+								<span class="index">4</span>
+								<span class="catname"><a href="#4">目录4</a></span>
+							</li>
+							<li class="level1">
+								<span class="index">5</span>
+								<span class="catname"><a href="#5">目录5</a></span>
+							</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+			
+			<div>
+				<h2 class="head_title1" id="1">
+					<span class="head_cnt">基本信息</span>
+				</h2>
+				<div class="info">
+					<dl class="baseinf">
+						<dt class="baseinf_item name">姓名</dt>
+						<dd class="baseinf_item value">王一博</dd>
+					
+						<dt class="baseinf_item name">英文名</dt>
+						<dd class="baseinf_item value">YiBo</dd>
+
+						<dt class="baseinf_item name">别 名</dt>
+						<dd class="baseinf_item value">白牡丹、小王子、王甜甜、酷盖</dd>
+
+						<dt class="baseinf_item name">国 籍</dt>
+						<dd class="baseinf_item value">中华人民共和国</dd>
+
+						<dt class="baseinf_item name">民 族</dt>
+						<dd class="baseinf_item value">汉族</dd>
+
+						<dt class="baseinf_item name">星 座</dt>
+						<dd class="baseinf_item value">狮子座</dd>
+
+						<dt class="baseinf_item name">血 型</dt>
+						<dd class="baseinf_item value">AB型</dd>
+					</dl>
+					<dl class="baseinf">
+						<dt class="baseinf_item name">姓名</dt>
+						<dd class="baseinf_item value">王一博</dd>
+					
+						<dt class="baseinf_item name">英文名</dt>
+						<dd class="baseinf_item value">YiBo</dd>
+
+						<dt class="baseinf_item name">王一博</dt>
+						<dd class="baseinf_item value">王一博</dd>
+
+						<dt class="baseinf_item name">王一博</dt>
+						<dd class="baseinf_item value">王一博</dd>
+
+						<dt class="baseinf_item name">王一博</dt>
+						<dd class="baseinf_item value">王一博</dd>
+
+						<dt class="baseinf_item name">王一博</dt>
+						<dd class="baseinf_item value">王一博</dd>
+
+						<dt class="baseinf_item name">王一博</dt>
+						<dd class="baseinf_item value">王一博</dd>
+					</dl>
+				</div>
+			</div>
+			<div>
+				<h2 class="head_title1" id="2">
+					<span class="head_cnt">个人经历</span>
+				</h2>
+				<div class="para">
+					2014年9月15日，以UNIQ组合成员身份亮相。10月16日，随组合参加韩国音乐节目《M！Countdown》，首次登上放送舞台，正式开始韩国的活动；10月20日，随组合演唱的首支单曲《Falling In Love》中韩双版公开 [14]  ；10月24日，随组合为美国电影《忍者神龟：变种时代》演唱主题曲《BornTo Fight（生而为战）》 [15]  。11月10日，随组合为美国动画电影《马达加斯加的企鹅》演唱中文主题曲《Celebrate》 [16]  ；11月25日，随组合在北京举办“UNIQ独一无二FanMeeting”，正式开启中国宣传行程 [17]  。12月6日，随组合获得尖叫爱奇艺之夜颁奖盛典最具期待组合奖 [2]  ；12月23日，与组合成员共同在搜狐时尚盛典上演唱歌曲《Falling In Love》；12月31日，随组合参加东方卫视跨年盛典 [18]  。
+				</div>
+
+				<div class="para">
+					2015年4月23日，随组合获得酷音乐亚洲盛典年度内地最佳新人奖 [4]  ；4月24日，随组合发行首张中韩双版迷你专辑《EOEO优+》 [19]  ；4月28日，与姚晨、唐嫣联袂主演的青春励志电影《梦想合伙人》上映，在片中饰演学霸赵书宇，并演唱片尾曲《My Dream》 [20-21]  。5月，随组合在《the show韩秀榜》节目中获得中国区实时投票三连冠和该榜单年中“China Choice”冠军，并在《全球中文音乐榜上榜》节目中获得榜单三连冠 [22]  。7月，主演爱情电影《大话西游3》，饰演红孩儿一角 [23]  。10月16日，随组合发行一周年纪念单曲《Best Friend》中韩双版 [24]  。12月5日，随组合获得尖叫爱奇艺之夜颁奖礼年度音乐大奖 [11]  ；12月28日，随组合发布新年贺岁单曲《新年快乐》 [19]  。
+				</div>
+				<div class="para">
+					2016年1月1日，以“天天小兄弟”身份加入湖南卫视综艺节目《天天向上》主持团阵容；1月5日，随组合凭借歌曲《EOEO》获得International-K Music Awards最佳编舞奖 [5]  。3月，主演时尚爱情喜剧电影《闭嘴！爱吧》 [25]  。4月29日，正式成为综艺节目《天天向上》主持团“天天兄弟”成员 [26]  。8月，与佟大为、陈乔恩共同主演都市爱情励志喜剧《人间至味是清欢》，饰演90后海归高富帅翟至味 [27]  。11月，特别出演爱情校园剧《青春最好时》，在剧中饰演风云学长林佳一 [28]  。
+				</div>
+				<div class="para">
+					2017年3月，主演青春校园仙侠剧《私立蜀山学园》，其在剧中饰演的男主角滕净，是位千年罕见的剑术天才，亦是重情重义、从容豁达的九州界第一剑修 [29]  。4月，获得第十七届音乐风云榜年度盛典偶像新势力奖 [30]  。8月，与关晓彤共同演绎电影《二次初恋》的同名主题曲 [31]  。9月，获得亚洲影响力盛典最佳新人演员奖、中国榜样女性盛典中获得风尚慈善榜样奖以及微博电视影响力盛典年度新锐艺人奖 [32]  。11月9日，获得凤凰时尚之选颁奖盛典年度票选网友最爱新晋演员奖 [33]  ；11月17日，为第四届炫舞节献唱的主题曲《Just Dance》发行 [34]  。12月10日，在邢潇执导的青春喜剧《超凡天赋》中饰演男主角蔚逸晨 [35]  ；12月20日，获得新浪时尚风格大赏年度新锐艺人奖 [36]  。
+				</div>
+				<div class="para">
+					2018年1月，获得QQ兴趣部落心赏之夜年度心赏新锐男艺人。2月，主持湖南卫视春节联欢晚会 [37]  。3月23日，受邀担任腾讯竞演类真人秀节目《创造101》的舞蹈导师 [38]  ；3月31日，参加《浙江卫视春季盛典》 [39]  。4月，搭档迪丽热巴主演的青春热血微电影《热舞吧！青春》上线，饰演热爱跳舞的少年林进 [40]  。6月，参加湖南卫视《未来可期，快乐中国毕业歌会》 [41]  。7月，参加湖南卫视综艺节目《快乐大本营》 [42]  。8月，与程潇联袂演唱美国电影《巨齿鲨》的宣传曲《鲨影》 [43]  。9月，领衔主演青春电竞电视连续剧《陪你到世界之巅》，饰演男主角季向空 [44]  。10月23日，演唱《昨日青空》电影“青春成长曲”《年少心事》 [45]  。12月31日，主持《2018-2019湖南卫视跨年演唱会》 [46]  。
+				</div>
+				<div class="para">
+					2019年，发布单曲《Fire》 [47]  ；3月13日，发行单曲《Lucky》 [48]  ；6月20日，参与录制的滑板青春运动竞技真人秀《极限青春》在腾讯视频播出 [49]  。6月27日，主演的古装仙侠剧《陈情令》在腾讯视频播出，王一博饰演正直内敛的姑苏蓝氏二公子蓝忘机 [50]  。
+				</div>
+			</div>
+			<div>
+				<h2 class="head_title1" id="3">
+					<span class="head_cnt">主要作品</span>
+				</h2>
+				<div id="music_work">
+					<h3 class="head_title2">
+						<span>音乐作品</span>
+					</h3>
+				</div>
+				<div class="work_cnt">
+					<h3 class="head_title3">
+						<span>专辑</span>
+					</h3>
+					<div class="album">
+						<table class="music_table">
+							<tr>
+								<th>专辑名称</th>
+								<th>发行时间</th>
+								<th>语言</th>
+								<th>详情</th>
+							</tr>
+							<tr>
+								<td>Best Friend</td>
+								<td>2015-10-16</td>
+								<td>国语/日语/韩语</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Best Friend</td>
+								<td>2015-10-16</td>
+								<td>国语/日语/韩语</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Best Friend</td>
+								<td>2015-10-16</td>
+								<td>国语/日语/韩语</td>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+					</div>
+
+					<h3 class="head_title3">
+						<span>单曲</span>
+					</h3>
+					<div class="single">
+						<table class="music_table">
+							<tr>
+								<th>歌曲名称</th>
+								<th>发行时间</th>
+								<th>语言</th>
+								<th>详情</th>
+							</tr>
+							<tr>
+								<td>Best Friend</td>
+								<td>2015-10-16</td>
+								<td>国语/日语/韩语</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Best Friend</td>
+								<td>2015-10-16</td>
+								<td>国语/日语/韩语</td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>Best Friend</td>
+								<td>2015-10-16</td>
+								<td>国语/日语/韩语</td>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="drama_work">
+					<h3 class="head_title2">
+						<span>参演电视剧</span>
+					</h3>
+				</div>
+				<div id="film_work">
+					<h3 class="head_title2">
+						<span>参演电影</span>
+					</h3>
+				</div>
+				<div id="audio_work">
+					<h3 class="head_title2">
+						<span>配音作品</span>
+					</h3>
+				</div>
+				<div id="host_work">
+					<h3 class="head_title2">
+						<span>主持节目</span>
+					</h3>
+				</div>
+				<div id="muse_work">
+					<h3 class="head_title2">
+						<span>综艺节目</span>
+					</h3>
+				</div>
+				<div id="pic_work">
+					<h3 class="head_title2">
+						<span>杂志写真</span>
+					</h3>
+				</div>
+			</div>
+			<div>
+				<h2 class="head_title1" id="4">
+					<span class="head_cnt">获奖信息</span>
+				</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="backtop">
+		<a href="#">Top</a>
+	</div>
+</body>
+</html>
